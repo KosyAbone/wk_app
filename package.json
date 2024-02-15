@@ -1,0 +1,11 @@
+{
+  "name": "wk_app",
+  "version": "1.0.0",
+  "description": "WorkingKlassNG E-commerce Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kosisochukwu Abone",
+  "license": "MIT"
+}
