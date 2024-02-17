@@ -5,12 +5,18 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon wk_backend/server.js"
+    "start": "node wk_backend/server.js",
+    "server": "nodemon wk_backend/server.js",
+    "client": "npm start --prefix wk_frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Kosisochukwu Abone",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.4",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
