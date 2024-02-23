@@ -10,7 +10,7 @@
     "client": "npm start --prefix wk_frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node wk_backend/seeder.js",
-    "data:destroy": "node wk_backend/seeder.js --destroy"
+    "data:destroy": "node wk_backend/seeder.js -d"
   },
   "author": "Kosisochukwu Abone",
   "license": "MIT",
