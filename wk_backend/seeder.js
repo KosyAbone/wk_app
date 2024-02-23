@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import products from "./products";
-import users from "./users";
-import User from "./models/userModel";
-import Product from "./models/productModel";
-import Order from "./models/orderModel";
-import connectDB from "./config/db";
+import products from "./products.js";
+import users from "./users.js";
+import User from "./models/userModel.js";
+import Product from "./models/productModel.js";
+import Order from "./models/orderModel.js";
+import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import colors from "colors";
 dotenv.config();
@@ -42,3 +42,8 @@ const destroyData = async () => {
     }
 }
 
+if(process.argv[2] === "-d") {
+    destroyData();
+} else {
+    importData();
+}

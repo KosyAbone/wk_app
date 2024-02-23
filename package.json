@@ -8,7 +8,9 @@
     "start": "node wk_backend/server.js",
     "server": "nodemon wk_backend/server.js",
     "client": "npm start --prefix wk_frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node wk_backend/seeder.js",
+    "data:destroy": "node wk_backend/seeder.js --destroy"
   },
   "author": "Kosisochukwu Abone",
   "license": "MIT",
