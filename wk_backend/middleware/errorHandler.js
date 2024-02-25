@@ -4,7 +4,7 @@ const notFound = (req, res, next) => {
   next(error);
 }
 
-const errorHandler = (err, req, res, next) => {
+const handleError = (err, req, res, next) => {
     const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
     const message = err.message || "Internal Server Error";
     if(err.name === "CastError" && err.kind === "ObjectId"){
@@ -12,7 +12,9 @@ const errorHandler = (err, req, res, next) => {
         message = "Resource not found";
     }
     res.status(statusCode).json({
-        message: message,
+        message,
         stack: process.env.NODE_ENV === "production" ? null : err.stack
     })
 }
+
+export {notFound, handleError};
