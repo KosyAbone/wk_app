@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node wk_backend/server.js",
-    "server": "nodemon wk_backend/server.js",
+    "server": "nodemon wk_backend/server.js --ignore client",
     "client": "npm start --prefix wk_frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node wk_backend/seeder.js",
